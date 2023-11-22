@@ -2,6 +2,7 @@
 #include <X11/X.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include <X11/Xlib.h>
 
@@ -31,6 +32,7 @@ int main(int argc, const char *argv[]){
 
     if (Dsp == NULL) {
         fprintf(stderr, "Cannot open display !");
+        exit(1);
     }
     
     Win = XCreateSimpleWindow(Dsp, Root, POSX, POSY, Width, Height, Border_Width,
