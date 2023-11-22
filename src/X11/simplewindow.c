@@ -10,7 +10,7 @@ int main(int argc, const char *argv[]){
     Display *Dsp;
     Window Win;
     Dsp = XOpenDisplay(NULL);
-    int Scr = XDefaultScreen(Dsp);
+    int Scr = DefaultScreen(Dsp);
 
     XEvent Xe;
 
@@ -23,7 +23,11 @@ int main(int argc, const char *argv[]){
     int Border_Width = 1;
 
     unsigned long Border = WhitePixel(Dsp, Scr);
-    unsigned long Background_Pixel = BlackPixel(Dsp, Scr);
+    unsigned long Background_Pixel = WhitePixel(Dsp, Scr);
+
+
+    unsigned long valuemask = 0;
+    valuemask = CWBackPixel | CWBorderPixel | CWEventMask;
 
     if (Dsp == NULL) {
         fprintf(stderr, "Cannot open display !");
