@@ -7,9 +7,9 @@ Support in multi-platform.
 
 # Toolchains & Dependencies
 - LLVM 15.x
-- gmake
 
 - Xorg/X11
 - OpenGL
-- Windows API
+- FreeGLUT
+- Windows 10/11 SDK
 
