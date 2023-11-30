@@ -1,4 +1,4 @@
-# HyX-Layer
+# Window-Sample
 Sample for basic window system in operating system. <br>
 Support in multi-platform.
 
